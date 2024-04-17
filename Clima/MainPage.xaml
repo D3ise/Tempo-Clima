@@ -1,12 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Clima.MainPage">
+             x:Class="Clima.MainPage"
+             Shell.NavBarIsVisible="False">
 
-    <Grid>
+    <Grid
+     ColumnSpacing="5"
+     RowSpacing = "5">
+    
+
      <Grid.RowDefinitions>
-        <RowDefinition Height="100"/>
-        <RowDefinition Height="100"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
      </Grid.RowDefinitions>
      <Grid.ColumnDefinitions>
         <ColumnDefinition Width="*"/>
@@ -14,57 +20,217 @@
         <ColumnDefinition Width="*"/>
      </Grid.ColumnDefinitions>
 
+     <Image Source="dianublado.png"
+    Grid.RowSpan="3"
+    Grid.ColumnSpan="3"
+     Aspect="AspectFill"/>
+
     <Frame x:Name="Clima"
         CornerRadius="20"
         Padding="0"
+        Margin="5, 50, 5, 30"
         BorderColor="Black"
-        BackgroundColor="#55a9ccde"
+        BackgroundColor="#55ffffff"
         Grid.Row= "0"
+        Grid.RowSpan="2"
         Grid.Column="0">
+
+    <Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="100"/>
+    </Grid.ColumnDefinitions>
+
+    <Label Text="23"
+     Grid.Row= "0"
+     Grid.Column="0"
+     FontSize="60"
+     TextColor="Black"
+     HorizontalTextAlignment="Center"/>
+
+    <Label Text="Tempo Nublado"
+     Grid.Row= "1"
+     Grid.Column="0"
+     FontSize="15"
+     TextColor="Black"
+     HorizontalTextAlignment="Center"/>
+
+    <Label Text="Apucarana, PR"
+     Grid.Row= "2"
+     Grid.Column="0"
+     FontSize="15"
+     TextColor="Black"
+     HorizontalTextAlignment="Center"/>
+
+    </Grid>
     </Frame>
 
     <Frame x:Name="Chuva"
         CornerRadius="20"
         Padding="0"
+        Margin="5, 50, 5, 5"
         BorderColor="Black"
-        BackgroundColor="#55a9ccde"
+        BackgroundColor="#55ffffff"
         Grid.Row= "0"
         Grid.Column="1">
+
+    <Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+     </Grid.RowDefinitions>
+     <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="100"/>
+        <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
+
+    <Label Text="NUVEM"
+     Grid.Row= "0"
+     Grid.ColumnSpan="2"
+     FontSize="18"
+     TextColor="Black"
+     HorizontalTextAlignment="Center"/>
+
+    <Label Text="Chuva:"
+     Grid.Row= "1"
+     Grid.Column="0"
+     FontSize="15"
+     TextColor="Black"
+     HorizontalTextAlignment="Center"/>
+
+    <Label Text="Umidade:"
+     Grid.Row= "2"
+     Grid.Column="0"
+     FontSize="15"
+     TextColor="Black"
+     HorizontalTextAlignment="Center"/>
+
+    </Grid>
+
     </Frame>
 
     <Frame x:Name="Sol"
         CornerRadius="20"
         Padding="0"
+        Margin="5, 5, 5, 30"
         BorderColor="Black"
-        BackgroundColor="#55a9ccde"
-        Grid.Row= "0"
+        BackgroundColor="#55ffffff"
+        Grid.Row= "1"
         Grid.Column="1">
+
+    <Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+     </Grid.RowDefinitions>
+     <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="100"/>
+        <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
+
+    <Label Text="SOL"
+     Grid.Row= "0"
+     Grid.ColumnSpan="2"
+     FontSize="18"
+     TextColor="Black"
+     HorizontalTextAlignment="Center"/>
+
+    <Label Text="Amanhecer:"
+     Grid.Row= "1"
+     Grid.Column="0"
+     FontSize="15"
+     TextColor="Black"
+     HorizontalTextAlignment="Center"/>
+
+    <Label Text="Anoitecer:"
+     Grid.Row= "2"
+     Grid.Column="0"
+     FontSize="15"
+     TextColor="Black"
+     HorizontalTextAlignment="Center"/>
+
+    </Grid>
+
     </Frame>
 
     <Frame x:Name="Vento"
         CornerRadius="20"
         Padding="0"
+        Margin="5, 50, 5, 5"
         BorderColor="Black"
-        BackgroundColor="#55a9ccde"
+        BackgroundColor="#55ffffff"
         Grid.Row= "0"
         Grid.Column="2">
+
+    <Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+     </Grid.RowDefinitions>
+     <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="100"/>
+        <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
+
+    <Label Text="Vento"
+     Grid.Row= "0"
+     Grid.ColumnSpan="2"
+     FontSize="18"
+     TextColor="Black"
+     HorizontalTextAlignment="Center"/>
+
+    <Label Text="Força:"
+     Grid.Row= "1"
+     Grid.Column="0"
+     FontSize="15"
+     TextColor="Black"
+     HorizontalTextAlignment="Center"/>
+
+    <Label Text="Direção:"
+     Grid.Row= "2"
+     Grid.Column="0"
+     FontSize="15"
+     TextColor="Black"
+     HorizontalTextAlignment="Center"/>
+    </Grid>
+
     </Frame>
 
     <Frame x:Name="Lua"
         CornerRadius="20"
         Padding="0"
+        Margin="5, 5, 5, 30"
         BorderColor="Black"
-        BackgroundColor="#55a9ccde"
-        Grid.Row= "0"
+        BackgroundColor="#55ffffff"
+        Grid.Row= "1"
         Grid.Column="2">
+    <Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+     </Grid.RowDefinitions>
+     <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
+    </Grid>
+
     </Frame>
 
     <Frame x:Name="segundaparte"
         CornerRadius="20"
         Padding="0"
+        Margin="10"
         BorderColor="Black"
-        BackgroundColor="#55a9ccde"
-        Grid.Row= "1"
+        BackgroundColor="#55ffffff"
+        Grid.Row= "2"
         Grid.Column="0"
         Grid.ColumnSpan="3">
     </Frame>
