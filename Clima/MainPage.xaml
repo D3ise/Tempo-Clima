@@ -42,10 +42,10 @@
         <RowDefinition Height="*"/>
     </Grid.RowDefinitions>
     <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="100"/>
+        <ColumnDefinition Width="120"/>
     </Grid.ColumnDefinitions>
 
-    <Label Text="23"
+    <Label x:Name="Labeltemp"
      Grid.Row= "0"
      Grid.Column="0"
      FontSize="60"
@@ -96,7 +96,7 @@
      TextColor="Black"
      HorizontalTextAlignment="Center"/>
 
-    <Label Text="Chuva:"
+    <Label x:Name="Labelrain"
      Grid.Row= "1"
      Grid.Column="0"
      FontSize="15"
@@ -179,7 +179,7 @@
         <ColumnDefinition Width="*"/>
     </Grid.ColumnDefinitions>
 
-    <Label Text="Vento"
+    <Label Text="VENTO"
      Grid.Row= "0"
      Grid.ColumnSpan="2"
      FontSize="18"
@@ -221,6 +221,21 @@
         <ColumnDefinition Width="*"/>
     </Grid.ColumnDefinitions>
     </Grid>
+
+    <Label Text="LUA"
+     Grid.Row= "0"
+     Grid.ColumnSpan="2"
+     FontSize="18"
+     TextColor="Black"
+     HorizontalTextAlignment="Center"/>
+
+    <Label Text="Fase:"
+     Grid.Row= "1"
+     Grid.Column="1"
+     FontSize="15"
+     TextColor="Black"
+     HorizontalTextAlignment="Center"/>
+
 
     </Frame>
 
