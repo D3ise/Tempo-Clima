@@ -20,4 +20,13 @@ public class results
 
     public string currently {get;set;}
 
+    public string codition_code {get;set;}
+
+    public string img_id {get;set;}
+
+    public double cloudiness {get;set;}
+    
+    public string wind_cardinal {get;set;}
+
+
 }

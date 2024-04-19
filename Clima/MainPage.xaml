@@ -5,8 +5,8 @@
              Shell.NavBarIsVisible="False">
 
     <Grid
-     ColumnSpacing="5"
-     RowSpacing = "5">
+     ColumnSpacing="1"
+     RowSpacing = "1">
     
 
      <Grid.RowDefinitions>
@@ -20,7 +20,7 @@
         <ColumnDefinition Width="*"/>
      </Grid.ColumnDefinitions>
 
-     <Image Source="dianublado.png"
+     <Image x:Name="ImgFundo"
     Grid.RowSpan="3"
     Grid.ColumnSpan="3"
      Aspect="AspectFill"/>
@@ -42,7 +42,7 @@
         <RowDefinition Height="*"/>
     </Grid.RowDefinitions>
     <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="120"/>
+        <ColumnDefinition Width="100"/>
     </Grid.ColumnDefinitions>
 
     <Label x:Name="Labeltemp"
@@ -55,14 +55,14 @@
     <Label Text="Tempo Nublado"
      Grid.Row= "1"
      Grid.Column="0"
-     FontSize="15"
+     FontSize="12"
      TextColor="Black"
      HorizontalTextAlignment="Center"/>
 
-    <Label Text="Apucarana, PR"
+    <Label x:Name="Labelcity"
      Grid.Row= "2"
      Grid.Column="0"
-     FontSize="15"
+     FontSize="12"
      TextColor="Black"
      HorizontalTextAlignment="Center"/>
 
@@ -71,7 +71,7 @@
 
     <Frame x:Name="Chuva"
         CornerRadius="20"
-        Padding="0"
+        Padding="2"
         Margin="5, 50, 5, 5"
         BorderColor="Black"
         BackgroundColor="#55ffffff"
@@ -85,20 +85,27 @@
         <RowDefinition Height="*"/>
      </Grid.RowDefinitions>
      <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="100"/>
-        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="80"/>
+        <ColumnDefinition Width="40"/>
     </Grid.ColumnDefinitions>
 
     <Label Text="NUVEM"
      Grid.Row= "0"
      Grid.ColumnSpan="2"
-     FontSize="18"
+     FontSize="15"
      TextColor="Black"
      HorizontalTextAlignment="Center"/>
 
-    <Label x:Name="Labelrain"
+    <Label Text="Chuva"
      Grid.Row= "1"
      Grid.Column="0"
+     FontSize="15"
+     TextColor="Black"
+     HorizontalTextAlignment="Center"/>
+
+     <Label x:Name="Labelrain"
+     Grid.Row= "1"
+     Grid.Column="1"
      FontSize="15"
      TextColor="Black"
      HorizontalTextAlignment="Center"/>
@@ -110,13 +117,20 @@
      TextColor="Black"
      HorizontalTextAlignment="Center"/>
 
+     <Label x:Name="Labelhumidity"
+     Grid.Row= "2"
+     Grid.Column="1"
+     FontSize="15"
+     TextColor="Black"
+     HorizontalTextAlignment="Center"/>
+
     </Grid>
 
     </Frame>
 
     <Frame x:Name="Sol"
         CornerRadius="20"
-        Padding="0"
+        Padding="2"
         Margin="5, 5, 5, 30"
         BorderColor="Black"
         BackgroundColor="#55ffffff"
@@ -130,28 +144,42 @@
         <RowDefinition Height="*"/>
      </Grid.RowDefinitions>
      <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="100"/>
+        <ColumnDefinition Width="80"/>
         <ColumnDefinition Width="*"/>
     </Grid.ColumnDefinitions>
 
     <Label Text="SOL"
      Grid.Row= "0"
      Grid.ColumnSpan="2"
-     FontSize="18"
+     FontSize="15"
      TextColor="Black"
      HorizontalTextAlignment="Center"/>
 
     <Label Text="Amanhecer:"
      Grid.Row= "1"
      Grid.Column="0"
-     FontSize="15"
+     FontSize="12"
+     TextColor="Black"
+     HorizontalTextAlignment="Center"/>
+
+     <Label x:Name="Labelsunrise"
+     Grid.Row= "1"
+     Grid.Column="1"
+     FontSize="12"
      TextColor="Black"
      HorizontalTextAlignment="Center"/>
 
     <Label Text="Anoitecer:"
      Grid.Row= "2"
      Grid.Column="0"
-     FontSize="15"
+     FontSize="12"
+     TextColor="Black"
+     HorizontalTextAlignment="Center"/>
+
+     <Label x:Name="Labelsunset"
+     Grid.Row= "2"
+     Grid.Column="1"
+     FontSize="12"
      TextColor="Black"
      HorizontalTextAlignment="Center"/>
 
@@ -161,7 +189,7 @@
 
     <Frame x:Name="Vento"
         CornerRadius="20"
-        Padding="0"
+        Padding="2"
         Margin="5, 50, 5, 5"
         BorderColor="Black"
         BackgroundColor="#55ffffff"
@@ -175,14 +203,14 @@
         <RowDefinition Height="*"/>
      </Grid.RowDefinitions>
      <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="100"/>
-        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="60"/>
+        <ColumnDefinition Width="60"/>
     </Grid.ColumnDefinitions>
 
     <Label Text="VENTO"
      Grid.Row= "0"
      Grid.ColumnSpan="2"
-     FontSize="18"
+     FontSize="15"
      TextColor="Black"
      HorizontalTextAlignment="Center"/>
 
@@ -193,19 +221,35 @@
      TextColor="Black"
      HorizontalTextAlignment="Center"/>
 
+    <Label x:Name="Labelwind_speedy"
+     Grid.Row= "1"
+     Grid.Column="1"
+     FontSize="15"
+     TextColor="Black"
+     HorizontalTextAlignment="Center"/>
+
     <Label Text="Direção:"
      Grid.Row= "2"
      Grid.Column="0"
      FontSize="15"
      TextColor="Black"
      HorizontalTextAlignment="Center"/>
+
+     <Label x:Name="Labelwind_direction"
+     Grid.Row= "2"
+     Grid.Column="1"
+     FontSize="15"
+     TextColor="Black"
+     HorizontalTextAlignment="Center"/>
+
+     
     </Grid>
 
     </Frame>
 
     <Frame x:Name="Lua"
         CornerRadius="20"
-        Padding="0"
+        Padding="2"
         Margin="5, 5, 5, 30"
         BorderColor="Black"
         BackgroundColor="#55ffffff"
@@ -217,25 +261,31 @@
         <RowDefinition Height="*"/>
      </Grid.RowDefinitions>
      <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="*"/>
-        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="50"/>
+        <ColumnDefinition Width="50"/>
     </Grid.ColumnDefinitions>
-    </Grid>
 
     <Label Text="LUA"
      Grid.Row= "0"
      Grid.ColumnSpan="2"
-     FontSize="18"
+     FontSize="15"
      TextColor="Black"
      HorizontalTextAlignment="Center"/>
 
     <Label Text="Fase:"
      Grid.Row= "1"
-     Grid.Column="1"
+     Grid.Column="0"
      FontSize="15"
      TextColor="Black"
      HorizontalTextAlignment="Center"/>
 
+     <Label x:Name="Labelmoon_phase"
+     Grid.Row= "1"
+     Grid.Column="1"
+     FontSize="15"
+     TextColor="Black"
+     HorizontalTextAlignment="Center"/>
+    </Grid>
 
     </Frame>
 
