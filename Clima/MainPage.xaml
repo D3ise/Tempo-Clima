@@ -4,9 +4,7 @@
              x:Class="Clima.MainPage"
              Shell.NavBarIsVisible="False">
 
-    <Grid
-     ColumnSpacing="1"
-     RowSpacing = "1">
+    <Grid>
     
 
      <Grid.RowDefinitions>
@@ -28,7 +26,7 @@
     <Frame x:Name="Clima"
         CornerRadius="20"
         Padding="0"
-        Margin="5, 50, 5, 30"
+        Margin="5, 50, 2, 30"
         BorderColor="Black"
         BackgroundColor="#55ffffff"
         Grid.Row= "0"
@@ -72,7 +70,7 @@
     <Frame x:Name="Chuva"
         CornerRadius="20"
         Padding="2"
-        Margin="5, 50, 5, 5"
+        Margin="2, 50, 2, 5"
         BorderColor="Black"
         BackgroundColor="#55ffffff"
         Grid.Row= "0"
@@ -131,7 +129,7 @@
     <Frame x:Name="Sol"
         CornerRadius="20"
         Padding="2"
-        Margin="5, 5, 5, 30"
+        Margin="2, 5, 2, 30"
         BorderColor="Black"
         BackgroundColor="#55ffffff"
         Grid.Row= "1"
@@ -190,7 +188,7 @@
     <Frame x:Name="Vento"
         CornerRadius="20"
         Padding="2"
-        Margin="5, 50, 5, 5"
+        Margin="2, 50, 2, 5"
         BorderColor="Black"
         BackgroundColor="#55ffffff"
         Grid.Row= "0"
@@ -250,7 +248,7 @@
     <Frame x:Name="Lua"
         CornerRadius="20"
         Padding="2"
-        Margin="5, 5, 5, 30"
+        Margin="2, 5, 2, 30"
         BorderColor="Black"
         BackgroundColor="#55ffffff"
         Grid.Row= "1"
