@@ -39,7 +39,7 @@ public partial class MainPage : ContentPage
   {
 	Labeltemp.Text = resposta.results.temp.ToString();
 	Labelcity.Text = resposta.results.city;
-	//Labeldescription.Text = resposta.results.description;
+	Labeldescription.Text = resposta.results.description;
 	Labelrain.Text = resposta.results.rain.ToString();
 	Labelhumidity.Text = resposta.results.humidity.ToString();
 	Labelsunrise.Text = resposta.results.sunrise;

@@ -40,7 +40,7 @@
         <RowDefinition Height="*"/>
     </Grid.RowDefinitions>
     <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="100"/>
+        <ColumnDefinition Width="*"/>
     </Grid.ColumnDefinitions>
 
     <Label x:Name="Labeltemp"
@@ -50,7 +50,7 @@
      TextColor="Black"
      HorizontalTextAlignment="Center"/>
 
-    <Label Text="Tempo Nublado"
+    <Label x:Name="Labeldescription"
      Grid.Row= "1"
      Grid.Column="0"
      FontSize="12"
@@ -94,7 +94,7 @@
      TextColor="Black"
      HorizontalTextAlignment="Center"/>
 
-    <Label Text="Chuva"
+    <Label Text="Chuva:"
      Grid.Row= "1"
      Grid.Column="0"
      FontSize="15"
