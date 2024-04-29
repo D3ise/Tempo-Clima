@@ -37,6 +37,7 @@ public partial class MainPage : ContentPage
 
   void PreencherTela()
   {
+	ListaForecast.ItemsSource=resposta.results.forecast;
 	Labeltemp.Text = resposta.results.temp.ToString();
 	Labelcity.Text = resposta.results.city;
 	Labeldescription.Text = resposta.results.description;
@@ -50,6 +51,18 @@ public partial class MainPage : ContentPage
 		Labelmoon_phase.Text = "Cheia";
 	else if (resposta.results.moon_phase=="new")
 		Labelmoon_phase.Text = "Nova";
+	else if (resposta.results.moon_phase=="waxing_crescent")
+		Labelmoon_phase.Text = "Crescente";
+	else if (resposta.results.moon_phase=="waxing_gibbous")
+		Labelmoon_phase.Text = "Gibosa Crescente";
+	else if (resposta.results.moon_phase=="first_quarter")
+		Labelmoon_phase.Text = "Quarto Crescente";
+	else if (resposta.results.moon_phase=="waning_crescent")
+		Labelmoon_phase.Text = "Minguante";
+	else if (resposta.results.moon_phase=="waning_gibbous")
+		Labelmoon_phase.Text = "Gibosa Minguante";
+	else
+	Labelmoon_phase.Text = "Quarto Minguante";
 	//Labelcurrently.Text = resposta.results.currently;
 	//Labelcodition_code.Text = resposta.results.codition_code;
 	//Labelimg_id.Text = resposta.results.img_id;

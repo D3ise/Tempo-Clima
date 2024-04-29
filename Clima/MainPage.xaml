@@ -259,8 +259,8 @@
         <RowDefinition Height="*"/>
      </Grid.RowDefinitions>
      <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="50"/>
-        <ColumnDefinition Width="50"/>
+        <ColumnDefinition Width="40"/>
+        <ColumnDefinition Width="*"/>
     </Grid.ColumnDefinitions>
 
     <Label Text="LUA"
@@ -280,26 +280,98 @@
      <Label x:Name="Labelmoon_phase"
      Grid.Row= "1"
      Grid.Column="1"
-     FontSize="15"
+     FontSize="12"
      TextColor="Black"
      HorizontalTextAlignment="Center"/>
     </Grid>
 
     </Frame>
 
-    <Frame x:Name="segundaparte"
-        CornerRadius="20"
-        Padding="0"
+    <Frame CornerRadius="20"
         Margin="10"
         BorderColor="Black"
         BackgroundColor="#55ffffff"
         Grid.Row= "2"
         Grid.Column="0"
         Grid.ColumnSpan="3">
-    </Frame>
+    <CollectionView x:Name="ListaForecast">
+     <CollectionView.ItemsLayout>
+      <LinearItemsLayout Orientation="Horizontal"
+                         ItemSpacing="10"/>
+     </CollectionView.ItemsLayout>
+     <CollectionView.ItemTemplate>
+     <DataTemplate>
+    <Frame CornerRadius="20"
+        BorderColor="Black"
+        BackgroundColor="#55ffffff"
+        WidthRequest="200">
+    <Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+     </Grid.RowDefinitions>
+     <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="40"/>
+        <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
 
-    
-    
+    <Label Text="{Binding date}"
+     Grid.Row= "0"
+     Grid.ColumnSpan="2"
+     FontSize="15"
+     TextColor="Black"
+     HorizontalTextAlignment="Center"/>
+    <Label Text="{Binding weekday}"
+     Grid.Row= "1"
+     Grid.ColumnSpan="2"
+     FontSize="15"
+     TextColor="Black"
+     HorizontalTextAlignment="Center"/>
+
+    <Label Text="Min:"
+     Grid.Row= "2"
+     Grid.Column="0"
+     FontSize="12"
+     TextColor="Black"
+     HorizontalTextAlignment="Center"/>
+
+    <Label Text="Max:"
+     Grid.Row= "3"
+     Grid.Column="0"
+     FontSize="12"
+     TextColor="Black"
+     HorizontalTextAlignment="Center"/>
+
+    <Label Text="{Binding min, StringFormat='{0}º C'}"
+     Grid.Row= "2"
+     Grid.Column="1"
+     FontSize="15"
+     TextColor="Black"
+     HorizontalTextAlignment="Center"/>
+
+    <Label Text="{Binding max, StringFormat='{0}º C'}"
+     Grid.Row= "3"
+     Grid.Column="1"
+     FontSize="15"
+     TextColor="Black"
+     HorizontalTextAlignment="Center"/>
+
+    <Image Source="{Binding condition}"
+    Aspect="Fill"
+    HeightRequest="50"
+    WidthRequest="50"
+    Grid.Row="4"
+    Grid.ColumnSpan="2"/>
+
     </Grid>
-
+    </Frame>
+    </DataTemplate>
+    </CollectionView.ItemTemplate>
+    </CollectionView>
+    
+    </Frame>
+    </Grid>
 </ContentPage>

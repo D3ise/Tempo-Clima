@@ -28,5 +28,7 @@ public class Results
     
     public string wind_cardinal {get;set;}
 
+    public List<Forecast> forecast {get;set;}
+
 
 }
